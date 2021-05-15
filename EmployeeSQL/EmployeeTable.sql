@@ -41,7 +41,7 @@ CREATE TABLE "Salaries" (
 );
 
 CREATE TABLE "Titles" (
-    "title_id" varchar   NOT NULL,
+    "emp_title_id" varchar   NOT NULL,
     "title" varchar   NOT NULL
 );
 
@@ -60,6 +60,6 @@ REFERENCES "Employees" ("emp_no");
 ALTER TABLE "Salaries" ADD CONSTRAINT "fk_Salaries_emp_no" FOREIGN KEY("emp_no")
 REFERENCES "Employees" ("emp_no");
 
-ALTER TABLE "Titles" ADD CONSTRAINT "fk_Titles_title_id" FOREIGN KEY("title_id")
+ALTER TABLE "Titles" ADD CONSTRAINT "fk_Titles_emp_title_id" FOREIGN KEY("emp_title_id")
 REFERENCES "Employees" ("emp_title_id");
 
