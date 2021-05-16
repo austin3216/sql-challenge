@@ -21,6 +21,15 @@ SELECT e.first_name, e.last_name, e.hire_date
 
 -- 3. List the manager of each department with the following information: department number, department name, the manager's employee number, last name, first name.
 
+SELECT * FROM "Employees"
+
+SELECT d.dept_no, d.dept_name, dm.emp_no, e.last_name, e.first_name
+	FROM "Departments" AS d
+	JOIN "Dept_Manager" AS dm
+		ON d.dept_no = dm.dept_no
+	JOIN "Employees" AS e
+		ON dm.emp_no = e.emp_no;
+
 
 -- 4. List the department of each employee with the following information: employee number, last name, first name, and department name.
 
